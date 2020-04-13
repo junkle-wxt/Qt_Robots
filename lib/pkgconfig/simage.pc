@@ -1,0 +1,19 @@
+prefix=/cygdrive/c/Coin3D
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: simage
+Description: a library with image format loaders and front-ends to common import libraries
+Version: 1.7.0
+Requires:
+Conflicts:
+Libs: -L${libdir} -L${exec_prefix}/lib -L/cygdrive/c/libsndfile -lsimage1d -lgdiplus
+Cflags: -I${includedir}  -I${prefix}/include -I/cygdrive/c/libsndfile/include -DSIMAGE_DLL
+
+simage_host="i686-pc-cygwin"
+compiler=wrapmsvc
+compiler_is_gcc=no
+datadir=${prefix}/share
+frameworkdir=@frameworkdir@
+msvcrt=@SIMAGE_MSVC_LIBC@

@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_7">
+    <item>
+     <widget class="QWidget" name="widget" native="true"/>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>回主界面</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>开始运动</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>轨迹记录</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>轨迹回放</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>回零</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>IP地址</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>端口号</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_2">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>TCP连接</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+     border: 2px solid #8f8f91;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+     min-width: 80px;
+	height:30px;
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }</string>
+         </property>
+         <property name="text">
+          <string>TCP断开</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit"/>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>一轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>二轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider_2">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>三轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider_3">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>四轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider_4">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>五轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider_5">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>六轴</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSlider" name="horizontalSlider_6">
+             <property name="styleSheet">
+              <string notr="true">QSlider
+{
+border-color: #bcbcbc;
+}
+
+QSlider::groove:horizontal {                                
+     height: 20px; 
+     border-radius :3px;                                     
+     left: 5px; 
+     right: 5px; 
+     background-color:green;
+}
+
+QSlider::handle:horizontal {                                                        
+	 background-color:#000;
+     width: 10px;
+	 border: none;
+     width: 15px;
+     margin-top: -40px;
+	 margin-bottom: -40px;                 
+}
+QSlider::sub-page:horizontal {
+                border-radius :3px;
+                background-color:#0cc;
+                }</string>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>29</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis1(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>479</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>666</x>
+     <y>600</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis2(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>499</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>751</x>
+     <y>629</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis3(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>694</x>
+     <y>615</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis4(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>696</x>
+     <y>604</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis5(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>559</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>619</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>axis6(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>779</x>
+     <y>579</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>778</x>
+     <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>go_zero()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>781</x>
+     <y>240</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>828</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>menubar</sender>
+   <signal>triggered(QAction*)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>show1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>14</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-13</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>emit_signal()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>611</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>802</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>705</x>
+     <y>478</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>760</x>
+     <y>687</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_2</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>675</x>
+     <y>495</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>770</x>
+     <y>668</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_3</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>735</x>
+     <y>519</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>727</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_4</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>751</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>748</x>
+     <y>823</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_5</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>735</x>
+     <y>550</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>729</x>
+     <y>882</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSlider_6</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>path_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>744</x>
+     <y>577</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>721</x>
+     <y>865</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_record()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>683</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>833</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>open_record_time()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>717</x>
+     <y>177</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>895</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>axis1(int)</slot>
+  <slot>axis2(int)</slot>
+  <slot>axis3(int)</slot>
+  <slot>axis4(int)</slot>
+  <slot>axis5(int)</slot>
+  <slot>axis6(int)</slot>
+  <slot>go_zero()</slot>
+  <slot>show1()</slot>
+  <slot>emit_signal()</slot>
+  <slot>path_record()</slot>
+  <slot>open_record()</slot>
+  <slot>open_record_time()</slot>
+ </slots>
+</ui>

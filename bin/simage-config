@@ -1,0 +1,115 @@
+#! /bin/sh
+# **************************************************************************
+# This is a script for retrieving configuration information about the
+# installed simage libraries on the system.
+#
+# Authors:
+#   Morten Eriksen <mortene@coin3d.org>
+#   Lars J. Aas <larsa@coin3d.org>
+#
+
+me=`echo "$0" | sed 's,^.*[/\\],,g'`
+wd=`echo "$0" | sed 's,/[^/]*$,,'`
+prefix=`cd "$wd/.."; pwd`
+
+alternate=default
+
+for arg
+do
+  case $arg in
+  --alternate=*) alternate=`echo $arg | cut -d= -f2-` ;;
+  esac
+done
+
+if test -f $prefix/share/Coin/conf/simage-$alternate.cfg; then
+  . $prefix/share/Coin/conf/simage-$alternate.cfg
+elif test -f $prefix/share/Coin/conf/simage-default.cfg; then
+  . $prefix/share/Coin/conf/simage-default.cfg
+else
+  echo >&2 "$me: no default simage config available"
+  exit 1
+fi
+
+# Remove gcc system directories includes from the include path
+if test x"$compiler_is_gcc" = x"yes"; then
+  sim_ac_save_cpp=$CPP
+  CPP="cpp"
+  case `uname -s` in    
+    Darwin) CPP="cpp3"
+    ;;
+  esac
+  cpp_sys_dirs=`$CPP -v <<EOF 2>&1 | sed -n -e \
+  '/#include <...> search starts here:/,/End of search list./{
+    /#include <...> search starts here:/b
+    /End of search list./b
+    s/ /-I/
+    p
+  }' 
+EOF`
+  result=
+  for inc_path in $cppflags; do
+    additem=true
+    for sys_dir in $cpp_sys_dirs; do
+      if test x$inc_path = x$sys_dir; then
+        additem=false
+        break
+      fi
+    done
+    $additem && result="$result $inc_path"
+  done
+  cppflags=$result
+  CPP=$sim_ac_save_cpp
+fi
+
+usage="\
+Usage: $me [OPTIONS]
+Options:
+  --alternate=<string>
+  --cppflags
+  --cflags
+  --ldflags
+  --libs
+  --build <program> <sourcefile> [<sourcefile>]...
+  --version
+  --usage | --help"
+
+while test $# -gt 0
+do
+  case $1 in
+  --help | --usage) echo "$usage" ;;
+  --version)        echo "$version" ;;
+  --cppflags)       echo "$cppflags" ;;
+  --cflags)         echo "$cflags" ;;
+  --ldflags)        echo "$ldflags" ;;
+  --libs)           echo "$libs" ;;
+  --build)
+    shift
+    program=$1
+    shift
+    echo $compiler \
+      $cppflags $CPPFLAGS \
+      $cflags $CFLAGS \
+      $ldflags $LDFLAGS \
+      -o $program $@ \
+      $LIBS $libs
+    exec $compiler \
+      $cppflags $CPPFLAGS \
+      $cflags $CFLAGS \
+      $ldflags $LDFLAGS \
+      -o $program $@ \
+      $LIBS $libs
+    ;;
+  # ignore some options
+  --alternate=*) ;;
+  --debug) ;;
+  *)
+    echo >&2 "$me: Invalid option: \"$1\""
+    echo >&2 "$usage"
+    exit 1
+    ;;
+  esac
+  shift
+done
+
+exit 0
+
